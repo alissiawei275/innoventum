@@ -494,9 +494,16 @@ const TRANSLATIONS = {
   const STORAGE_KEY = 'innoventum_lang';
   const LANGS = ['fr', 'en', 'sv'];
 
-  // Detect initial language: stored preference → browser lang → fr
-  let lang = localStorage.getItem(STORAGE_KEY);
-  if (!lang) {
+  const META_DESCS = {
+    fr: "Solutions d'énergie solaire sur mesure pour entreprises. Ombrières PV, éoliennes, BESS, bornes EV. Clé en main depuis 2010.",
+    en: 'Tailored renewable energy solutions for businesses. Solar carports, wind turbines, BESS storage, EV charging. Turnkey since 2010.',
+    sv: 'Skräddarsydda förnybara energilösningar för företag. Solcarports, vindturbiner, BESS-lagring, EV-laddning. Nyckelfärdigt sedan 2010.'
+  };
+
+  // Priority: URL ?lang= param → stored preference → browser lang → fr
+  let lang = (new URLSearchParams(location.search)).get('lang');
+  if (!LANGS.includes(lang)) lang = localStorage.getItem(STORAGE_KEY);
+  if (!LANGS.includes(lang)) {
     const browser = (navigator.language || 'fr').slice(0, 2).toLowerCase();
     lang = LANGS.includes(browser) ? browser : 'fr';
   }
@@ -505,9 +512,15 @@ const TRANSLATIONS = {
     return (TRANSLATIONS[lang] || {})[key] || (TRANSLATIONS.fr || {})[key] || key;
   }
 
+  function setMeta(id, val) {
+    const el = document.getElementById(id);
+    if (el) el.content = val;
+  }
+
   function apply() {
     document.documentElement.lang = lang;
-    document.title = t('page.title');
+    const title = t('page.title');
+    document.title = title;
 
     // Plain text content
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -527,6 +540,14 @@ const TRANSLATIONS = {
       if (v) el.placeholder = v;
     });
 
+    // Update meta tags for current language
+    const desc = META_DESCS[lang] || META_DESCS.fr;
+    setMeta('meta-desc', desc);
+    setMeta('og-title', title);
+    setMeta('og-desc', desc);
+    setMeta('tw-title', title);
+    setMeta('tw-desc', desc);
+
     // Update switcher active state
     document.querySelectorAll('[data-lang]').forEach(btn => {
       const active = btn.dataset.lang === lang;
@@ -539,6 +560,11 @@ const TRANSLATIONS = {
     if (!LANGS.includes(l)) return;
     lang = l;
     localStorage.setItem(STORAGE_KEY, l);
+    // Update URL param without page reload (for bookmarking)
+    const url = new URL(location.href);
+    if (l === 'fr') url.searchParams.delete('lang');
+    else url.searchParams.set('lang', l);
+    history.replaceState(null, '', url);
     apply();
   }
 
@@ -553,3 +579,4 @@ const TRANSLATIONS = {
     ? document.addEventListener('DOMContentLoaded', init)
     : init();
 })();
+
