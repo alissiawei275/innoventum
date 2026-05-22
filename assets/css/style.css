@@ -510,3 +510,27 @@ p { color: var(--mid); font-size: .9rem; line-height: 1.65; }
   .footer-nav { grid-template-columns: 1fr 1fr; gap: 20px; }
   .footer-bottom-inner { flex-direction: column; gap: 10px; }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   LANGUAGE SWITCHER
+══════════════════════════════════════════════════════════════════ */
+.lang-switcher {
+  display: flex; gap: 2px; padding: 3px;
+  border-radius: 980px; background: rgba(255,255,255,.14);
+  transition: background .35s;
+}
+#nav.scrolled .lang-switcher { background: var(--bg-2); }
+.lang-btn {
+  font-size: .68rem; font-weight: 700; letter-spacing: .06em;
+  padding: 5px 11px; border-radius: 980px;
+  color: rgba(255,255,255,.65);
+  transition: background .2s var(--ease), color .2s; cursor: pointer;
+}
+#nav.scrolled .lang-btn { color: var(--mid); }
+.lang-btn:hover { color: var(--white); background: rgba(255,255,255,.15); }
+#nav.scrolled .lang-btn:hover { color: var(--dark); background: rgba(0,0,0,.07); }
+.lang-btn.active { background: var(--accent) !important; color: var(--white) !important; }
+.lang-switcher--mob { background: var(--bg-2); padding: 4px; }
+.lang-switcher--mob .lang-btn { color: var(--mid); font-size: .75rem; padding: 7px 16px; }
+.lang-switcher--mob .lang-btn:hover { color: var(--dark); background: rgba(0,0,0,.07); }
+@media (max-width: 480px) { #lang-switcher { display: none; } }

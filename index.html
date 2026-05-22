@@ -18,13 +18,21 @@
       <img id="nav-logo-img" src="assets/img/Logo_Innoventum_STORE_orange_White_text.png" alt="Innoventum" height="24">
     </a>
     <ul class="nav-links" role="list">
-      <li><a href="#solutions">Carport solaire</a></li>
-      <li><a href="#eolienne">Éolienne</a></li>
-      <li><a href="#technologies">Technologies</a></li>
-      <li><a href="#realisations">Réalisations</a></li>
-      <li><a href="#about">À propos</a></li>
+      <li><a href="#solutions" data-i18n="nav.carport">Carport solaire</a></li>
+      <li><a href="#eolienne" data-i18n="nav.wind">Éolienne</a></li>
+      <li><a href="#technologies" data-i18n="nav.tech">Technologies</a></li>
+      <li><a href="#realisations" data-i18n="nav.projects">Réalisations</a></li>
+      <li><a href="#about" data-i18n="nav.about">À propos</a></li>
     </ul>
-    <a href="#contact" class="btn-cta-nav" id="nav-cta">Demander un devis</a>
+
+    <!-- Language switcher -->
+    <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      <button class="lang-btn" data-lang="sv" aria-pressed="false">SV</button>
+    </div>
+
+    <a href="#contact" class="btn-cta-nav" id="nav-cta" data-i18n="nav.cta">Demander un devis</a>
     <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span>
     </button>
@@ -34,13 +42,19 @@
   <div class="mob-menu" id="mob-menu">
     <button class="mob-close" id="mob-close" aria-label="Fermer">✕</button>
     <ul role="list">
-      <li><a href="#solutions">Carport solaire</a></li>
-      <li><a href="#eolienne">Éolienne</a></li>
-      <li><a href="#technologies">Technologies</a></li>
-      <li><a href="#realisations">Réalisations</a></li>
-      <li><a href="#about">À propos</a></li>
+      <li><a href="#solutions" data-i18n="nav.carport">Carport solaire</a></li>
+      <li><a href="#eolienne" data-i18n="nav.wind">Éolienne</a></li>
+      <li><a href="#technologies" data-i18n="nav.tech">Technologies</a></li>
+      <li><a href="#realisations" data-i18n="nav.projects">Réalisations</a></li>
+      <li><a href="#about" data-i18n="nav.about">À propos</a></li>
     </ul>
-    <a href="#contact" class="btn-primary">Demander un devis</a>
+    <!-- Lang switcher repeated for mobile -->
+    <div class="lang-switcher lang-switcher--mob" role="group" aria-label="Language">
+      <button class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+      <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      <button class="lang-btn" data-lang="sv" aria-pressed="false">SV</button>
+    </div>
+    <a href="#contact" class="btn-primary" data-i18n="nav.cta">Demander un devis</a>
   </div>
 
   <!-- ════════════════════════ HERO ════════════════════════ -->
@@ -49,18 +63,17 @@
       <img src="assets/img/hero-featured.jpg" alt="Éolienne Innoventum sur ombrière solaire" class="hero-bg" fetchpriority="high">
       <div class="hero-overlay"></div>
     </div>
-    <!-- Video play badge -->
     <div class="hero-play" aria-hidden="true">
       <span class="play-btn">▶</span>
       <span class="play-time">02:14 — 23:44</span>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Leader européen · En activité depuis 2010</p>
-      <h1>L'énergie<br><em>réinventée.</em></h1>
-      <p class="hero-sub">Des solutions sur mesure pour vos parkings d'entreprise. Structure bois lamellé-collé, design scandinave. Installation sans béton. Clé en main.</p>
+      <p class="hero-eyebrow" data-i18n="hero.eyebrow">Leader européen · En activité depuis 2010</p>
+      <h1 data-i18n-html="hero.h1">L'énergie<br><em>réinventée.</em></h1>
+      <p class="hero-sub" data-i18n="hero.sub">Des solutions sur mesure pour vos parkings d'entreprise. Structure bois lamellé-collé, design scandinave. Installation sans béton. Clé en main.</p>
       <div class="hero-ctas">
-        <a href="#contact" class="btn-primary" id="hero-cta-1">Demander un devis</a>
-        <a href="#realisations" class="btn-ghost" id="hero-cta-2">Nos réalisations</a>
+        <a href="#contact" class="btn-primary" id="hero-cta-1" data-i18n="hero.cta1">Demander un devis</a>
+        <a href="#realisations" class="btn-ghost" id="hero-cta-2" data-i18n="hero.cta2">Nos réalisations</a>
       </div>
     </div>
   </section>
@@ -69,91 +82,87 @@
   <section id="solutions" class="section-solutions">
     <div class="container">
       <div class="section-intro reveal-up">
-        <p class="label-tag">Nos solutions</p>
-        <h2>Une gamme complète<br>d'<em>énergie propre</em></h2>
-        <p class="intro-aside">Du carport solaire à la borne de recharge, Innoventum couvre toute votre transition énergétique.</p>
+        <p class="label-tag" data-i18n="sol.label">Nos solutions</p>
+        <h2 data-i18n-html="sol.h2">Une gamme complète d'<em>énergie propre</em></h2>
+        <p class="intro-aside" data-i18n="sol.aside">Du carport solaire à la borne de recharge, Innoventum couvre toute votre transition énergétique.</p>
       </div>
 
       <div class="sol-grid">
-        <!-- Card 1 -->
         <article class="sol-card sol-card--feature reveal-up" style="--d:0s">
           <div class="sol-card-img">
             <img src="assets/img/Pewsey-carport-30-scaled.jpg" alt="Ombrière photovoltaïque Carport solaire">
             <span class="sol-badge">Flagship</span>
           </div>
           <div class="sol-card-body">
-            <h3>Ombrière photovoltaïque &amp;<br>Carport solaire</h3>
-            <p>Notre star depuis juillet 2026. Structure bois lamellé-collé avec panneaux solaires intégrés. Régions et performances pour tous. Financement participatif possible.</p>
+            <h3 data-i18n-html="sol.card1.h3">Ombrière photovoltaïque &amp;<br>Carport solaire</h3>
+            <p data-i18n="sol.card1.p">Notre star depuis juillet 2026. Structure bois lamellé-collé avec panneaux solaires intégrés. Régions et performances pour tous. Financement participatif possible.</p>
             <div class="sol-links">
-              <a href="#contact" class="link-arrow">Particuliers →</a>
-              <a href="#contact" class="link-arrow">Entreprises →</a>
+              <a href="#contact" class="link-arrow" data-i18n="sol.link.indiv">Particuliers →</a>
+              <a href="#contact" class="link-arrow" data-i18n="sol.link.biz">Entreprises →</a>
             </div>
           </div>
         </article>
 
-        <!-- Card 2 -->
         <article class="sol-card reveal-up" style="--d:.05s">
           <div class="sol-card-img">
             <img src="assets/img/Pewsey-carport-26-scaled.jpg" alt="Carport solaire résidentiel">
           </div>
           <div class="sol-card-body">
-            <h3>Carport solaire résidentiel</h3>
-            <p>Solution compacte pour particuliers et espaces résidentiels. Régions et performances pour tous.</p>
+            <h3 data-i18n="sol.card2.h3">Carport solaire résidentiel</h3>
+            <p data-i18n="sol.card2.p">Solution compacte pour particuliers et espaces résidentiels. Régions et performances pour tous.</p>
             <div class="sol-links">
-              <a href="#contact" class="link-arrow">Particuliers →</a>
+              <a href="#contact" class="link-arrow" data-i18n="sol.link.indiv">Particuliers →</a>
             </div>
           </div>
         </article>
 
-        <!-- Card 3 -->
-        <article class="sol-card reveal-up" style="--d:.1s">
+        <article class="sol-card reveal-up" style="--d:.1s" id="eolienne">
           <div class="sol-card-img">
             <img src="assets/img/dalifant-11kw-small-wind-turbine-1.jpg" alt="Petite éolienne Dalifant">
           </div>
           <div class="sol-card-body">
-            <h3>Petit éolien</h3>
-            <p>Éolienne urbaine jusqu'à 11 kW. Silencieuse, esthétique. Pour zones commerciales et industrielles.</p>
+            <h3 data-i18n="sol.card3.h3">Petit éolien</h3>
+            <p data-i18n="sol.card3.p">Éolienne urbaine jusqu'à 11 kW. Silencieuse, esthétique. Pour zones commerciales et industrielles.</p>
             <div class="sol-links">
-              <a href="#eolienne" class="link-arrow">Particuliers →</a>
+              <a href="#contact" class="link-arrow" data-i18n="sol.link.indiv">Particuliers →</a>
             </div>
           </div>
         </article>
 
-        <!-- Card 4 -->
-        <article class="sol-card reveal-up" style="--d:.15s">
+        <article class="sol-card reveal-up" style="--d:.15s" id="technologies">
           <div class="sol-card-img">
             <img src="assets/img/wooden-solar-carport-with-integr-2.jpg" alt="Borne de recharge véhicule électrique">
           </div>
           <div class="sol-card-body">
-            <h3>Borne de recharge véhicule électrique</h3>
-            <p>Infrastructure DC/AC intégrée. Gestion intelligente de la charge pour flottes d'entreprise. Bornes JC.</p>
+            <h3 data-i18n="sol.card4.h3">Borne de recharge véhicule électrique</h3>
+            <p data-i18n="sol.card4.p">Infrastructure DC/AC intégrée. Gestion intelligente de la charge pour flottes d'entreprise. Bornes JC.</p>
             <div class="sol-links">
-              <a href="#contact" class="link-arrow">Solutions flottes →</a>
+              <a href="#contact" class="link-arrow" data-i18n="sol.link.biz">Entreprises →</a>
             </div>
           </div>
         </article>
 
-        <!-- Card 5 -->
         <article class="sol-card reveal-up" style="--d:.2s">
           <div class="sol-card-img">
             <img src="assets/img/GIRAFFE-ESS-IMAX-KRAFTRINGEN.jpeg" alt="Stockage d'énergie BESS">
           </div>
           <div class="sol-card-body">
-            <h3>Stockage d'énergie</h3>
-            <p>Batteries BESS pour autoconsommation optimale et résilience énergétique. Solutions batteries pour tous usages.</p>
+            <h3 data-i18n="sol.card5.h3">Stockage d'énergie</h3>
+            <p data-i18n="sol.card5.p">Batteries BESS pour autoconsommation optimale et résilience énergétique. Solutions batteries pour tous usages.</p>
             <div class="sol-links">
-              <a href="#technologies" class="link-arrow">Solutions batteries →</a>
+              <a href="#contact" class="link-arrow" data-i18n="sol.link.biz">Entreprises →</a>
             </div>
           </div>
         </article>
       </div>
 
-      <!-- Discover carport link -->
-      <div class="section-more reveal-up"><a href="#realisations" class="link-arrow-lg">Découvrir les carports →</a></div>
+      <div class="section-more reveal-up">
+        <a href="#realisations" class="link-arrow-lg" data-i18n="sol.discover">Découvrir les carports →</a>
+      </div>
     </div>
   </section>
 
-  <!-- ════════════════════════ ABOUT / HISTOIRE ════════════════════════ -->
+  <!-- ════════════════════════ ABOUT ════════════════════════ -->
   <section id="about" class="section-about">
     <div class="container">
       <div class="about-grid">
@@ -166,43 +175,41 @@
           </div>
         </div>
         <div class="about-content">
-          <p class="label-tag reveal-up">Notre histoire</p>
-          <h2 class="reveal-up">Design, durabilité<br><em>&amp; innovation</em></h2>
+          <p class="label-tag reveal-up" data-i18n="about.label">Notre histoire</p>
+          <h2 class="reveal-up" data-i18n-html="about.h2">Design, durabilité<br><em>&amp; innovation</em></h2>
           <div class="about-quote reveal-up" style="--d:.05s">
-            <p class="quote-large"><em>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</em></p>
+            <p class="quote-large" data-i18n="about.quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
           </div>
-          <p class="reveal-up" style="--d:.1s">Praesent porta lacinia arcu a semper. Sed viverra urna eu accumsan eleifend. Donec tincidunt vulputate dui, accumsan eleifend lectus luctus sed. Pellentesque ornare magna sed velit molestie. Pellentesque auctor magna sed velit molestie.</p>
-          <p class="reveal-up" style="--d:.15s">Quelque chose à ajouter concernant certains aspects intéressants. Proin et ligula odio. Nunc vivus odio quis imperdiet posuere. Nullam congue ex quis vulput augue consequat. Nullam pharetra ex aliquet lorem. Malesuada felis sed velit aliquet. Praesent tincidunt tempus magna feugiat. Nulla enim lacenia.</p>
-          <a href="#contact" class="btn-primary reveal-up" style="--d:.2s" id="about-cta">Faites votre demande de devis personnalisé</a>
-
-          <!-- 4 USPs -->
+          <p class="reveal-up" style="--d:.1s" data-i18n="about.p1">Praesent porta lacinia arcu a semper. Sed viverra urna eu accumsan eleifend. Donec tincidunt vulputate dui, accumsan eleifend lectus luctus sed. Pellentesque ornare magna sed velit molestie.</p>
+          <p class="reveal-up" style="--d:.15s" data-i18n="about.p2">Quelque chose à ajouter concernant certains aspects intéressants. Proin et ligula odio. Nunc vivus odio quis imperdiet posuere.</p>
+          <a href="#contact" class="btn-primary reveal-up" style="--d:.2s" id="about-cta" data-i18n="about.cta">Faites votre demande de devis personnalisé</a>
           <div class="about-usps reveal-up" style="--d:.25s">
             <div class="usp-item">
               <span class="usp-icon">⚡</span>
               <div>
-                <strong>Énergie verte &amp; certifiée écologique</strong>
-                <p>Chaque structure contribue à la transition énergétique durable</p>
+                <strong data-i18n-html="about.usp1.t">Énergie verte &amp; certifiée écologique</strong>
+                <p data-i18n="about.usp1.p">Chaque structure contribue à la transition énergétique durable</p>
               </div>
             </div>
             <div class="usp-item">
               <span class="usp-icon">🔧</span>
               <div>
-                <strong>Installation sans béton, plans dessins</strong>
-                <p>Système à ancrage par vis dans le sol, sans béton ni terrassement</p>
+                <strong data-i18n-html="about.usp2.t">Installation sans béton, plans &amp; dessins</strong>
+                <p data-i18n="about.usp2.p">Système à ancrage par vis dans le sol, sans béton ni terrassement</p>
               </div>
             </div>
             <div class="usp-item">
               <span class="usp-icon">✓</span>
               <div>
-                <strong>100 % sur mesure</strong>
-                <p>Chaque structure est conçue spécifiquement pour votre site</p>
+                <strong data-i18n="about.usp3.t">100 % sur mesure</strong>
+                <p data-i18n="about.usp3.p">Chaque structure est conçue spécifiquement pour votre site</p>
               </div>
             </div>
             <div class="usp-item">
               <span class="usp-icon">🏠</span>
               <div>
-                <strong>Solution clé-en-main complète</strong>
-                <p>Étude, permis, installation, raccordement et suivi</p>
+                <strong data-i18n="about.usp4.t">Solution clé-en-main complète</strong>
+                <p data-i18n="about.usp4.p">Étude, permis, installation, raccordement et suivi</p>
               </div>
             </div>
           </div>
@@ -211,7 +218,7 @@
     </div>
   </section>
 
-  <!-- ════════════════════════ RÉGLEMENTAIRE ════════════════════════ -->
+  <!-- ════════════════════════ REGULATORY ════════════════════════ -->
   <section class="section-reg" id="reg" aria-label="Contexte réglementaire">
     <div class="reg-bg-img">
       <img src="assets/img/Dalifant-Senoren-with-Snow-1-scaled.jpeg" alt="Éolienne dans la neige" loading="lazy">
@@ -220,22 +227,22 @@
     <div class="container">
       <div class="reg-inner">
         <div class="reg-text reveal-up">
-          <p class="label-tag label-tag--light">Contexte réglementaire</p>
-          <h2 class="text-white">Une obligation qui<br><em class="accent-warm">crée une opportunité</em></h2>
-          <p class="text-white-70">Innoventum vous accompagne de l'audit initial jusqu'à la mise en service clé en main pour vous faire franchir l'échéance d'installations.</p>
-          <a href="#contact" class="btn-white" id="reg-cta">Vérifier ma conformité</a>
+          <p class="label-tag label-tag--light" data-i18n="reg.label">Contexte réglementaire</p>
+          <h2 class="text-white reveal-up" data-i18n-html="reg.h2">Une obligation qui<br><em class="accent-warm">crée une opportunité</em></h2>
+          <p class="text-white-70 reveal-up" style="--d:.05s" data-i18n="reg.p">Innoventum vous accompagne de l'audit initial jusqu'à la mise en service clé en main pour vous faire franchir l'échéance d'installations.</p>
+          <a href="#contact" class="btn-white reveal-up" style="--d:.1s" id="reg-cta" data-i18n="reg.cta">Vérifier ma conformité</a>
         </div>
-        <div class="reg-cards reveal-up" style="--d:.1s">
+        <div class="reg-cards reveal-up" style="--d:.15s">
           <div class="reg-card">
-            <div class="reg-date">Juill. 2026</div>
+            <div class="reg-date" data-i18n="reg.date1">Juill. 2026</div>
             <div class="reg-body">
-              <p>Parkings &gt; 500 m² —<br>50 % de la surface couverte en production d'énergie renouvelable. Centre sportifs, hypermarchés, administrations — tous concernés.</p>
+              <p data-i18n="reg.card1">Parkings > 500 m² — 50 % de la surface couverte en production d'énergie renouvelable. Centres sportifs, hypermarchés, administrations — tous concernés.</p>
             </div>
           </div>
           <div class="reg-card">
-            <div class="reg-date">Juill. 2028</div>
+            <div class="reg-date" data-i18n="reg.date2">Juill. 2028</div>
             <div class="reg-body">
-              <p>Extension à tous les grands parcs de stationnement &gt; 1 500 m². Centre sportifs, hypermarchés, administrations — tous concernés.</p>
+              <p data-i18n="reg.card2">Extension à tous les grands parcs de stationnement > 1 500 m². Centres sportifs, hypermarchés, administrations — tous concernés.</p>
             </div>
           </div>
         </div>
@@ -248,10 +255,10 @@
     <div class="container">
       <div class="real-header reveal-up">
         <div>
-          <p class="label-tag">Nos réalisations</p>
-          <h2>+100 installations<br><em>sur 4 continents</em></h2>
+          <p class="label-tag" data-i18n="real.label">Nos réalisations</p>
+          <h2 data-i18n-html="real.h2">+100 installations<br><em>sur 4 continents</em></h2>
         </div>
-        <a href="#contact" class="btn-outline" id="real-all-cta">Voir tous les projets</a>
+        <a href="#contact" class="btn-outline" id="real-all-cta" data-i18n="real.cta">Voir tous les projets</a>
       </div>
 
       <div class="real-grid reveal-up" style="--d:.05s">
@@ -285,42 +292,42 @@
     <div class="container">
       <div class="testi-header reveal-up">
         <div>
-          <p class="label-tag">Témoignages clients</p>
-          <h2>Ils nous font<br><em>confiance</em></h2>
+          <p class="label-tag" data-i18n="testi.label">Témoignages clients</p>
+          <h2 data-i18n-html="testi.h2">Ils nous font<br><em>confiance</em></h2>
         </div>
-        <a href="#contact" class="btn-primary" id="testi-cta">Laisser un avis</a>
+        <a href="#contact" class="btn-primary" id="testi-cta" data-i18n="testi.cta">Laisser un avis</a>
       </div>
       <div class="testi-grid">
         <blockquote class="testi-card reveal-up" style="--d:0s">
           <div class="testi-stars">★★★★★</div>
-          <p>"Une installation parfaitement réalisée et dans les délais. Le design en bois est vraiment unique et nos clients remarquent immédiatement la différence."</p>
+          <p data-i18n="testi.1.q">"Une installation parfaitement réalisée et dans les délais. Le design en bois est vraiment unique et nos clients remarquent immédiatement la différence."</p>
           <footer>
             <div class="testi-avatar" aria-hidden="true">JF</div>
             <div>
-              <strong>Jean-Marc Fontaine</strong>
-              <span>Directeur, SGC Com Centres</span>
+              <strong data-i18n="testi.1.name">Jean-Marc Fontaine</strong>
+              <span data-i18n="testi.1.role">Directeur, SGC Com Centres</span>
             </div>
           </footer>
         </blockquote>
         <blockquote class="testi-card reveal-up" style="--d:.1s">
           <div class="testi-stars">★★★★★</div>
-          <p>"L'installation s'est faite bien en temps et en heure, l'équipe tout aussi sympathique, le design bois est une véritable signature que nos clients adorent."</p>
+          <p data-i18n="testi.2.q">"L'installation s'est faite bien en temps et en heure, l'équipe tout aussi sympathique, le design bois est une véritable signature que nos clients adorent."</p>
           <footer>
             <div class="testi-avatar" aria-hidden="true">SB</div>
             <div>
-              <strong>Sophie Bernard</strong>
-              <span>Responsable RSE, Groupe Logistics</span>
+              <strong data-i18n="testi.2.name">Sophie Bernard</strong>
+              <span data-i18n="testi.2.role">Responsable RSE, Groupe Logistics</span>
             </div>
           </footer>
         </blockquote>
         <blockquote class="testi-card reveal-up" style="--d:.2s">
           <div class="testi-stars">★★★★★</div>
-          <p>"Innoventum nous a accompagnés de l'étude initiale jusqu'à la mise en service — un vrai partenaire de confiance pour notre transition énergétique."</p>
+          <p data-i18n="testi.3.q">"Innoventum nous a accompagnés de l'étude initiale jusqu'à la mise en service — un vrai partenaire de confiance pour notre transition énergétique."</p>
           <footer>
             <div class="testi-avatar" aria-hidden="true">PL</div>
             <div>
-              <strong>Pierre Lavondier</strong>
-              <span>DGA, Énergie Nord Collectivités</span>
+              <strong data-i18n="testi.3.name">Pierre Lavondier</strong>
+              <span data-i18n="testi.3.role">DGA, Énergie Nord Collectivités</span>
             </div>
           </footer>
         </blockquote>
@@ -333,46 +340,46 @@
     <div class="container">
       <div class="news-header reveal-up">
         <div>
-          <p class="label-tag">Actualités</p>
-          <h2>Dernières<br><em>nouvelles</em></h2>
+          <p class="label-tag" data-i18n="news.label">Actualités</p>
+          <h2 data-i18n-html="news.h2">Dernières<br><em>nouvelles</em></h2>
         </div>
-        <a href="#" class="btn-outline" id="news-all-cta">Toutes nos actualités</a>
+        <a href="#" class="btn-outline" id="news-all-cta" data-i18n="news.cta">Toutes nos actualités</a>
       </div>
       <div class="news-grid">
         <article class="news-card reveal-up" style="--d:0s">
           <div class="news-img">
             <img src="assets/img/Dali-16-modules-France-3.jpg" alt="Loi APER" loading="lazy">
-            <span class="news-cat">Réglementation</span>
+            <span class="news-cat" data-i18n="news.1.cat">Réglementation</span>
           </div>
           <div class="news-body">
-            <time class="news-date" datetime="2026-05-15">15 mai 2026</time>
-            <h3>Loi APER 2026 : mise à jour pour l'obligation de juillet 2026</h3>
-            <p>La réglementation évolue. Êtes-vous prêt pour l'obligation de juillet 2026 ?</p>
-            <a href="#" class="link-arrow">Lire l'article →</a>
+            <time class="news-date" datetime="2026-05-15" data-i18n="news.1.date">15 mai 2026</time>
+            <h3 data-i18n="news.1.h3">Loi APER 2026 : mise à jour pour l'obligation de juillet 2026</h3>
+            <p data-i18n="news.1.p">La réglementation évolue. Êtes-vous prêt pour l'obligation de juillet 2026 ?</p>
+            <a href="#" class="link-arrow" data-i18n="news.1.link">Lire l'article →</a>
           </div>
         </article>
         <article class="news-card reveal-up" style="--d:.1s">
           <div class="news-img">
             <img src="assets/img/Giraffe-Fiskar-2-scaled.jpg" alt="Nouveau carport" loading="lazy">
-            <span class="news-cat">Produit</span>
+            <span class="news-cat" data-i18n="news.2.cat">Produit</span>
           </div>
           <div class="news-body">
-            <time class="news-date" datetime="2026-04-28">28 avr. 2026</time>
-            <h3>Notre nouveau carport jusqu'à 200 places en 6 semaines</h3>
-            <p>Découvrez notre process d'installation accéléré pour les grands parcs.</p>
-            <a href="#" class="link-arrow">Lire l'article →</a>
+            <time class="news-date" datetime="2026-04-28" data-i18n="news.2.date">28 avr. 2026</time>
+            <h3 data-i18n="news.2.h3">Notre nouveau carport jusqu'à 200 places en 6 semaines</h3>
+            <p data-i18n="news.2.p">Découvrez notre process d'installation accéléré pour les grands parcs.</p>
+            <a href="#" class="link-arrow" data-i18n="news.2.link">Lire l'article →</a>
           </div>
         </article>
         <article class="news-card reveal-up" style="--d:.2s">
           <div class="news-img">
             <img src="assets/img/Giraffe-Austria-1.jpeg" alt="Prix de l'innovation" loading="lazy">
-            <span class="news-cat">Prix</span>
+            <span class="news-cat" data-i18n="news.3.cat">Prix</span>
           </div>
           <div class="news-body">
-            <time class="news-date" datetime="2026-03-10">10 mars 2026</time>
-            <h3>Prix de l'innovation Autriche — 80 places, 200 kWc en 5 semaines</h3>
-            <p>Innoventum récompensé pour son système d'installation rapide.</p>
-            <a href="#" class="link-arrow">Lire l'article →</a>
+            <time class="news-date" datetime="2026-03-10" data-i18n="news.3.date">10 mars 2026</time>
+            <h3 data-i18n="news.3.h3">Prix de l'innovation Autriche — 80 places, 200 kWc en 5 semaines</h3>
+            <p data-i18n="news.3.p">Innoventum récompensé pour son système d'installation rapide.</p>
+            <a href="#" class="link-arrow" data-i18n="news.3.link">Lire l'article →</a>
           </div>
         </article>
       </div>
@@ -384,44 +391,68 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info reveal-up">
-          <p class="label-tag">Parlons de</p>
-          <h2>votre projet.</h2>
-          <p>Notre équipe étudie votre parking gratuitement et vous propose une solution sur mesure de l'audit initial jusqu'à la mise en service clé en main.</p>
+          <p class="label-tag" data-i18n="contact.label">Parlons de</p>
+          <h2 data-i18n="contact.h2">votre projet.</h2>
+          <p data-i18n="contact.p">Notre équipe étudie votre parking gratuitement et vous propose une solution sur mesure de l'audit initial jusqu'à la mise en service clé en main.</p>
           <div class="contact-details">
-            <div class="cd-item"><span class="cd-icon">📞</span><div><strong>Téléphone</strong><a href="tel:+46403056655">+46 40 30 56 65</a></div></div>
-            <div class="cd-item"><span class="cd-icon">🕐</span><div><strong>Horaires</strong><span>Du lundi au vendredi, 9h à 18h</span></div></div>
-            <div class="cd-item"><span class="cd-icon">📍</span><div><strong>Siège Europe</strong><address>Tuborg Fairs 14, Helsingör, Sweden</address></div></div>
-            <div class="cd-item"><span class="cd-icon">🌐</span><div><strong>France &amp; Suisse</strong><address>+100 installations · +90 revendeurs</address></div></div>
+            <div class="cd-item"><span class="cd-icon">📞</span><div><strong data-i18n="contact.phone">Téléphone</strong><a href="tel:+46403056655">+46 40 30 56 65</a></div></div>
+            <div class="cd-item"><span class="cd-icon">🕐</span><div><strong data-i18n="contact.hours">Horaires</strong><span data-i18n="contact.hours.v">Du lundi au vendredi, 9h à 18h</span></div></div>
+            <div class="cd-item"><span class="cd-icon">📍</span><div><strong data-i18n="contact.hq">Siège Europe</strong><address>Tuborg Fairs 14, Helsingör, Sweden</address></div></div>
+            <div class="cd-item"><span class="cd-icon">🌐</span><div><strong data-i18n="contact.frch">France &amp; Suisse</strong><address data-i18n="contact.sub">+100 installations · +90 revendeurs</address></div></div>
           </div>
         </div>
         <form class="contact-form reveal-up" style="--d:.1s" id="contact-form" novalidate aria-label="Formulaire de devis">
           <div class="form-row">
-            <div class="fg"><label for="f-company">Entreprise *</label><input type="text" id="f-company" name="company" required autocomplete="organization" placeholder="Votre entreprise"></div>
-            <div class="fg"><label for="f-name">Nom *</label><input type="text" id="f-name" name="name" required autocomplete="name" placeholder="Votre nom"></div>
-          </div>
-          <div class="form-row">
-            <div class="fg"><label for="f-email">Email *</label><input type="email" id="f-email" name="email" required autocomplete="email" placeholder="email@entreprise.fr"></div>
-            <div class="fg"><label for="f-phone">Téléphone</label><input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+33 1 23 45 67 89"></div>
+            <div class="fg">
+              <label for="f-company" data-i18n="form.company">Entreprise *</label>
+              <input type="text" id="f-company" name="company" required autocomplete="organization" data-i18n-ph="form.company.ph" placeholder="Votre entreprise">
+            </div>
+            <div class="fg">
+              <label for="f-name" data-i18n="form.name">Nom *</label>
+              <input type="text" id="f-name" name="name" required autocomplete="name" data-i18n-ph="form.name.ph" placeholder="Votre nom">
+            </div>
           </div>
           <div class="form-row">
             <div class="fg">
-              <label for="f-type">Type de projet</label>
+              <label for="f-email" data-i18n="form.email">Email *</label>
+              <input type="email" id="f-email" name="email" required autocomplete="email" data-i18n-ph="form.email.ph" placeholder="email@entreprise.fr">
+            </div>
+            <div class="fg">
+              <label for="f-phone" data-i18n="form.phone">Téléphone</label>
+              <input type="tel" id="f-phone" name="phone" autocomplete="tel" data-i18n-ph="form.phone.ph" placeholder="+33 1 23 45 67 89">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="fg">
+              <label for="f-type" data-i18n="form.type">Type de projet</label>
               <select id="f-type" name="type">
-                <option value="">Sélectionnez…</option>
-                <option>Ombrière photovoltaïque / Carport solaire</option>
-                <option>Petite éolienne</option>
-                <option>Solution hybride solaire + éolien</option>
-                <option>Stockage d'énergie BESS</option>
-                <option>Borne de recharge EV</option>
-                <option>Solution complète</option>
+                <option value="" data-i18n="form.opt0">Sélectionnez…</option>
+                <option data-i18n="form.opt1">Ombrière photovoltaïque / Carport solaire</option>
+                <option data-i18n="form.opt2">Petite éolienne</option>
+                <option data-i18n="form.opt3">Solution hybride solaire + éolien</option>
+                <option data-i18n="form.opt4">Stockage d'énergie BESS</option>
+                <option data-i18n="form.opt5">Borne de recharge EV</option>
+                <option data-i18n="form.opt6">Solution complète</option>
               </select>
             </div>
-            <div class="fg"><label for="f-places">Nombre de places</label><input type="number" id="f-places" name="places" min="1" placeholder="Ex : 150"></div>
+            <div class="fg">
+              <label for="f-places" data-i18n="form.places">Nombre de places</label>
+              <input type="number" id="f-places" name="places" min="1" data-i18n-ph="form.places.ph" placeholder="Ex : 150">
+            </div>
           </div>
-          <div class="fg"><label for="f-surface">Surface du parking (m²)</label><input type="text" id="f-surface" name="surface" placeholder="Ex : 3 000 m²"></div>
-          <div class="fg"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="3" placeholder="Décrivez votre projet, contraintes ou questions…"></textarea></div>
-          <button type="submit" class="btn-primary btn-submit" id="form-submit">Envoyer ma demande <span class="arr">→</span></button>
-          <p class="form-note">* Champs obligatoires · Réponse sous 24h ouvrées</p>
+          <div class="fg">
+            <label for="f-surface" data-i18n="form.surface">Surface du parking (m²)</label>
+            <input type="text" id="f-surface" name="surface" data-i18n-ph="form.surface.ph" placeholder="Ex : 3 000 m²">
+          </div>
+          <div class="fg">
+            <label for="f-msg" data-i18n="form.msg">Message</label>
+            <textarea id="f-msg" name="message" rows="3" data-i18n-ph="form.msg.ph" placeholder="Décrivez votre projet, contraintes ou questions…"></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit" id="form-submit">
+            <span data-i18n="form.submit">Envoyer ma demande</span>
+            <span class="arr">→</span>
+          </button>
+          <p class="form-note" data-i18n="form.note">* Champs obligatoires · Réponse sous 24h ouvrées</p>
         </form>
       </div>
     </div>
@@ -433,7 +464,7 @@
       <div class="container footer-top-inner">
         <div class="footer-brand">
           <img src="assets/img/Logo_Innoventum_STORE_orange_White_text.png" alt="Innoventum" height="22">
-          <p>Leader européen en solutions d'énergie renouvelable. +100 installations sur 4 continents.</p>
+          <p data-i18n="footer.brand">Leader européen en solutions d'énergie renouvelable. +100 installations sur 4 continents.</p>
           <div class="footer-social">
             <a href="https://www.facebook.com/InnoVentum" target="_blank" rel="noopener" aria-label="Facebook">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -448,36 +479,59 @@
         </div>
         <nav class="footer-nav" aria-label="Pied de page">
           <div class="fc">
-            <strong>Carport Solaire</strong>
-            <ul><li><a href="#">Ombrière PV</a></li><li><a href="#">Résidentiel</a></li><li><a href="#">Configurations</a></li><li><a href="#">Dimensions</a></li><li><a href="#">Financement</a></li></ul>
+            <strong data-i18n="footer.col1">Carport Solaire</strong>
+            <ul>
+              <li><a href="#" data-i18n="footer.col1.1">Ombrière PV</a></li>
+              <li><a href="#" data-i18n="footer.col1.2">Résidentiel</a></li>
+              <li><a href="#" data-i18n="footer.col1.3">Configurations</a></li>
+              <li><a href="#" data-i18n="footer.col1.4">Dimensions</a></li>
+              <li><a href="#" data-i18n="footer.col1.5">Financement</a></li>
+            </ul>
           </div>
           <div class="fc">
-            <strong>Éolienne</strong>
-            <ul><li><a href="#">Dalifant</a></li><li><a href="#">Giraffe hybride</a></li><li><a href="#">Applications</a></li></ul>
+            <strong data-i18n="footer.col2">Éolienne</strong>
+            <ul>
+              <li><a href="#" data-i18n="footer.col2.1">Dalifant</a></li>
+              <li><a href="#" data-i18n="footer.col2.2">Giraffe hybride</a></li>
+              <li><a href="#" data-i18n="footer.col2.3">Applications</a></li>
+            </ul>
           </div>
           <div class="fc">
-            <strong>Technologies</strong>
-            <ul><li><a href="#">Stockage BESS</a></li><li><a href="#">Recharge EV</a></li><li><a href="#">Monitoring</a></li><li><a href="#">Intégration réseau</a></li></ul>
+            <strong data-i18n="footer.col3">Technologies</strong>
+            <ul>
+              <li><a href="#" data-i18n="footer.col3.1">Stockage BESS</a></li>
+              <li><a href="#" data-i18n="footer.col3.2">Recharge EV</a></li>
+              <li><a href="#" data-i18n="footer.col3.3">Monitoring</a></li>
+              <li><a href="#" data-i18n="footer.col3.4">Intégration réseau</a></li>
+            </ul>
           </div>
           <div class="fc">
-            <strong>À propos</strong>
-            <ul><li><a href="#">Notre histoire</a></li><li><a href="#">Équipe</a></li><li><a href="#">Partenaires</a></li><li><a href="#">Actualités</a></li><li><a href="#">Recrutement</a></li></ul>
+            <strong data-i18n="footer.col4">À propos</strong>
+            <ul>
+              <li><a href="#" data-i18n="footer.col4.1">Notre histoire</a></li>
+              <li><a href="#" data-i18n="footer.col4.2">Équipe</a></li>
+              <li><a href="#" data-i18n="footer.col4.3">Partenaires</a></li>
+              <li><a href="#" data-i18n="footer.col4.4">Actualités</a></li>
+              <li><a href="#" data-i18n="footer.col4.5">Recrutement</a></li>
+            </ul>
           </div>
         </nav>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p>© 2026 Innoventum AB · Tous droits réservés</p>
+        <p data-i18n="footer.copy">© 2026 Innoventum AB · Tous droits réservés</p>
         <div class="footer-bottom-links">
-          <a href="#">Mentions légales</a>
-          <a href="#">Politique de confidentialité</a>
-          <a href="#">CGV</a>
+          <a href="#" data-i18n="footer.legal">Mentions légales</a>
+          <a href="#" data-i18n="footer.privacy">Politique de confidentialité</a>
+          <a href="#" data-i18n="footer.cgv">CGV</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- i18n MUST load before main.js -->
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
